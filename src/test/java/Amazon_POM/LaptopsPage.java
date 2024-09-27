@@ -1,5 +1,6 @@
 package Amazon_POM;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -28,7 +29,11 @@ public class LaptopsPage
     }
 public void clickMLap()
 {
-    wait.until(ExpectedConditions.elementToBeClickable(menuLaptop)).click();
+//    System.out.println("test1");
+    wait.until(ExpectedConditions.elementToBeClickable(menuLaptop));
+//    System.out.println("test2");
+    ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView();",menuLaptop);
+    ((JavascriptExecutor)driver).executeScript("arguments[0].click();",menuLaptop);
 }
 public void clickCheck()
 {
