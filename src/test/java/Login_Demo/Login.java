@@ -1,16 +1,14 @@
+package Login_Demo;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 
 public class Login {
 
-    public WebDriver driver;
-    public WebDriverWait wait;
+    WebDriver driver;
 
     //Locators
     @FindBy(xpath = "//input[@placeholder='Username']")
@@ -26,22 +24,21 @@ public class Login {
     public Login(WebDriver driver)
     {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         PageFactory.initElements(driver,this);
     }
 
     //Action Methods
     public void setUserName(String user)
     {
-        wait.until(ExpectedConditions.elementToBeClickable(username_txt)).sendKeys(user);
+        username_txt.sendKeys(user);
     }
     public void setPassword (String pwd)
     {
-        wait.until(ExpectedConditions.elementToBeClickable(password_txt)).sendKeys(pwd);
+        password_txt.sendKeys(pwd);
     }
     public void submit ()
     {
-        wait.until(ExpectedConditions.elementToBeClickable(submit_btn)).click();
+        submit_btn.click();
     }
 
 }
