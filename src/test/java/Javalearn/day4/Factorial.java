@@ -9,4 +9,5 @@ public class Factorial {
         }
         System.out.println("Factorial of the number "+num+ " is "+fact);
     }
+
 }
