@@ -31,7 +31,7 @@ public class exceptionHandling {
 
         try {
             a[pos] = value;
-        } catch (Exception e) {
+        } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid position");
             System.out.println(e.getMessage());
         }
