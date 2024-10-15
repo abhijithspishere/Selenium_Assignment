@@ -22,11 +22,22 @@ public class reverseNumber {
         sb.setLength(7);
         System.out.println(sb); */
 
-        //Reversing a number using StringBuilder Form
-        int num = 1224;
+        //Reversing a number using StringBuilder and Check whether it is Palindrome
+        int num = 12234;
         String number = String.valueOf(num);
         StringBuilder sb = new StringBuilder(number);
-        System.out.println(sb.reverse());
+        String rev = String.valueOf(sb.reverse());
+        if(number.equals(rev))
+        {
+            System.out.println("The number is palindrome");
+        }
+        else
+        {
+            System.out.println("Not a palindrome");
+        }
+
+
+
 
     }
 }
