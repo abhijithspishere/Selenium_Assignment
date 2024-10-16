@@ -1,6 +1,7 @@
 package Javalearn.day8;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class arrayListDemo {
@@ -24,6 +25,7 @@ public class arrayListDemo {
         myList.add(100);
         myList.add(10.88);
         myList.add("Hello ASP");
+        myList.add(100);
         myList.add(null);
         myList.add(null);
         myList.add(true);
@@ -31,5 +33,44 @@ public class arrayListDemo {
 
         //Size of an ArrayList
         System.out.println("Size of an ArrayList"+myList.size());
+        System.out.println("Printing"+myList);
+
+        //Removing element from arrayList
+        myList.remove(3);
+        System.out.println(myList+"removed");
+
+        //Inserting arraylist element
+        myList.add(2,"java");
+        System.out.println(myList);
+
+        //Modify/replace Element
+        myList.set(2,"python");
+        System.out.println(myList);
+
+        //Access Specific element from arraylist
+        System.out.println(myList.get(3));
+        System.out.println(myList);
+
+        //Reading all elements in ArrayList
+       /* for (int i = 0; i < myList.size()-1; i++) {
+            System.out.println(myList.get(i));*/
+
+       /* for (Object x:myList) {
+            System.out.println(x);
+        }*/
+
+        //USING ITERATOR
+        //Iterator is only used for collections
+        Iterator iter = myList.iterator(); {
+            while(iter.hasNext())
+            {
+                System.out.println(iter.next());
+            }
+
+            //Checking arraylist is empty or not using Iterator
+            Boolean emp = myList.isEmpty();//here it is Wrapper Class Object
+            System.out.println(emp);
+
+        }
     }
 }
