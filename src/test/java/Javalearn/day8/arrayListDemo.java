@@ -36,7 +36,7 @@ public class arrayListDemo {
         System.out.println("Printing"+myList);
 
         //Removing element from arrayList
-        myList.remove(3);
+       /* myList.remove(3);
         System.out.println(myList+"removed");
 
         //Inserting arraylist element
@@ -49,7 +49,7 @@ public class arrayListDemo {
 
         //Access Specific element from arraylist
         System.out.println(myList.get(3));
-        System.out.println(myList);
+        System.out.println(myList);*/
 
         //Reading all elements in ArrayList
        /* for (int i = 0; i < myList.size()-1; i++) {
@@ -66,11 +66,30 @@ public class arrayListDemo {
             {
                 System.out.println(iter.next());
             }
-
             //Checking arraylist is empty or not using Iterator
             Boolean emp = myList.isEmpty();//here it is Wrapper Class Object
             System.out.println(emp);
-
         }
+
+        ArrayList myList2 = new ArrayList();
+
+        //These elements are the same from myList to delete
+        myList2.add(100);
+        myList2.add('A');
+        myList2.add(true);
+
+        //Remove specified  elements from myList using myLists2
+        myList.removeAll(myList2);
+        System.out.println("ArrayList after RemovedElements are "+myList);
+
+        //Remove ALL ELEMENTS
+        myList.clear();
+
+        Boolean emp = myList.isEmpty();
+        System.out.println(emp);
+        System.out.println("Is ArrayList empty or not  : "+emp);
+
+
+
     }
 }
