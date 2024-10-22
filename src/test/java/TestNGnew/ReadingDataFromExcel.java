@@ -22,7 +22,7 @@ public class ReadingDataFromExcel {
         XSSFSheet sheet = workbook.getSheet("Sheet1");
 
         int totalRows = sheet.getLastRowNum();//fetches total number of rows
-        int totalCells = sheet.getRow(1).getLastCellNum(); //fetches total number of cells
+        int totalCells = sheet.getRow(0).getLastCellNum(); //fetches total number of cells
 
         System.out.println("Number of Rows : "+totalRows); //5 Row number starts from 0
         System.out.println("Number of Cells : "+totalCells); //4 Cell or Column number starts from 1
