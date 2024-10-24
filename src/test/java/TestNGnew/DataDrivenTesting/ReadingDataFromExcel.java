@@ -1,4 +1,4 @@
-package TestNGnew;
+package TestNGnew.DataDrivenTesting;
 
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;

@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeTest;
 public class AmazonBase {
      WebDriver driver;
 
-    @BeforeTest
+    @BeforeClass
     public void setup()
     {
         driver = new ChromeDriver();
@@ -18,7 +18,7 @@ public class AmazonBase {
         driver.manage().window().maximize();
     }
 
-    @AfterTest
+    @AfterClass
     public void close()
     {
         driver.quit();
