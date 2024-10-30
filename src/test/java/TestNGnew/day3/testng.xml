@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" name="All Test Suite" parallel="tests">
+    <test name = "chromeTest">
+          name="C:/Users/WIIS/IdeaProjects/demoTest/src/test/java/TestNGnew/day3/ParallelTest.java">
+        <parameter name="browser" value="chrome">
+
+        </parameter>
+        <classes>
+            <class name="TestNGnew.day3.ParallelTest">
+
+            </class>
+        </classes>
+    </test>
+
+    <test name = "edgeTest">
+        name="C:/Users/WIIS/IdeaProjects/demoTest/src/test/java/TestNGnew/day3/ParallelTest.java">
+        <parameter name="browser" value="edge">
+
+        </parameter>
+        <classes>
+            <class name="TestNGnew.day3.ParallelTest">
+
+            </class>
+        </classes>
+    </test>
+
+    <test name = "firefoxTest">
+        name="C:/Users/WIIS/IdeaProjects/demoTest/src/test/java/TestNGnew/day3/ParallelTest.java">
+        <parameter name="browser" value="firefox">
+
+        </parameter>
+        <classes>
+            <class name="TestNGnew.day3.ParallelTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
